@@ -2,6 +2,7 @@ class Config(object):
     """
     Common configurations
     """
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class DevelopmentConfig(Config):
     """
@@ -10,6 +11,7 @@ class DevelopmentConfig(Config):
 
     DEBUG = True
     SQLALCHEMY_ECHO = True
+    FLASK_ENV = 'development'
 
 class ProductionConfig(Config):
     """

@@ -1,5 +1,5 @@
 #third party imports
-form flask import Flask
+from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 #local imports

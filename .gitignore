@@ -5,6 +5,7 @@ dist
 lib
 lib64
 __pycache__
+*.pyc
 
 #installer logs
 pip-log.txt
