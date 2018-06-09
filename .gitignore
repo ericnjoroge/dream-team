@@ -1,0 +1,12 @@
+#Packages
+*.egg
+*.egg-info
+dist
+lib
+lib64
+__pycache__
+
+#installer logs
+pip-log.txt
+
+venv
