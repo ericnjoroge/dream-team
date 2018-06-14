@@ -1,5 +1,5 @@
-from flask import render_template
-from flask_login import login_required
+from flask import render_template,abort
+from flask_login import login_required,current_user
 
 from . import home
 
@@ -17,3 +17,12 @@ def dashboard():
     Render the dashboard template
     """
     return render_template('home/dashboard.html',title="Dashboard")
+
+@home.route('/admin/dashboard')
+@login_required
+def admin_dashboard():
+    #prevent non admins from accessing this page
+    if not current_user.is_admin:
+        abort(403)
+
+    return render_template('home/admin_dashboard.html',title="Dashboard")
